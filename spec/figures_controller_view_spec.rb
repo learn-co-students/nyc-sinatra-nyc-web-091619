@@ -32,6 +32,7 @@ describe FiguresController do
     check "title_#{Title.first.id}"
     click_button "Create New Figure"
     figure = Figure.last
+    
     expect(Figure.all.count).to eq(3)
     expect(figure.name).to eq("Doctor Who")
     expect(figure.titles).to include(Title.first)

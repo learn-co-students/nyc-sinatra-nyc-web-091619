@@ -69,3 +69,17 @@ title_list.each do |name, figure_hash|
   p.name = name
   p.save
 end
+
+figure_titles_list = {
+    1 => [3, 2],
+    2 => [3, 3],
+    3 => [2, 3],
+    4 => [1, 9],
+    5 => [4, 1]
+  }
+
+figure_titles_list.each do |id, id_array|
+  p = FigureTitle.new
+  p.title_id = id_array[0]
+  p.figure_id = id_array[1]
+end
